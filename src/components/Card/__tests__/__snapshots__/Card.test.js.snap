@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> should call callback 1`] = `
+exports[`<Card /> should call the callback with the right arguments 1`] = `
 <div
   className="Card"
   onClick={[Function]}

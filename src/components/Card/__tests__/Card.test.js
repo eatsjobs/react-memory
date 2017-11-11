@@ -16,7 +16,7 @@ describe('<Card />', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should call callback', () => {
+    it('should call the callback with the right arguments', () => {
         const onSelect = jest.fn();
         const wrapper = shallow(
             <Card type='sun' index={0} onSelect={onSelect} flipped={false} matched={false} />

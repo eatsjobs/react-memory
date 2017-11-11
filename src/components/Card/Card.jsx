@@ -1,22 +1,7 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
-import sun from './asset/sun.jpg';
-import heart from './asset/heart.jpg';
-import flower from './asset/flower.jpg';
-import gufo from './asset/gufo.jpg';
-import ladybug from './asset/ladybug.jpg';
-import umbrella from './asset/umbrella.jpg';
 
 import './Card.css';
-
-const mapImagetoName = {
-    sun: sun,
-    flower: flower,
-    heart: heart,
-    gufo: gufo,
-    ladybug: ladybug,
-    umbrella: umbrella
-}
 
 function CardFront(){
     return (
@@ -29,7 +14,7 @@ function CardFront(){
 function CardBack(props){
     return (
         <div className='Card-Back'>
-            <img style={{width: '100%'}} src={mapImagetoName[props.type]} alt='' />
+            <img style={{width: '100%'}} src={props.imageSrc} alt='' />
         </div>
     )
 }
@@ -48,7 +33,7 @@ export default class Card extends Component {
         const CardClasses = cn('Card', { 'Card-Glow': this.props.matched });
         return (
             <div className={CardClasses} onClick={this.onSelect}>
-                {this.props.flipped ? <CardBack type={this.props.type} /> : <CardFront />}
+                {this.props.flipped ? <CardBack type={this.props.type} imageSrc={this.props.imageSrc}/> : <CardFront />}
             </div>
         );
     }
