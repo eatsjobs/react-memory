@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
+import question from './question.jpg';
 
 import './Card.css';
 
 function CardFront(){
     return (
         <div className='Card-Front'>
-            <img style={{ width: '100%' }} src='http://via.placeholder.com/265x265' alt='placeholder' />  
+            <img style={{ width: '100%' }} src={question} alt='placeholder' />  
         </div>
     )
 }
