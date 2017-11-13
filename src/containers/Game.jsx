@@ -60,6 +60,7 @@ export default class Game extends Component {
     handleSelection(index, type) {
         if(this.state.locked) { return; }
 
+        // TODO: extract only the right card
         const cards = this.state.cards.slice();
         if(cards[index].matched) { return; }
 
@@ -90,7 +91,7 @@ export default class Game extends Component {
                         locked: false, 
                         moves: this.state.moves + 1 
                     });
-                }, 1000);
+                }, 5000); // TODO: increase / decrease difficulty?
             }
         } else {            
             this.setState({ currentCard: { index, type }, locked: false });
