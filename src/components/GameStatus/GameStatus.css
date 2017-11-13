@@ -1,8 +1,12 @@
 .GameStatus-container {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    justify-content: center;
 }
 
 .GameStatus-moves {
-
+    margin-right: 5px;
 }
 
